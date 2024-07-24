@@ -1,6 +1,3 @@
-import 'dart:math';
-
-import 'package:calendar_agenda/calendar_agenda.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
@@ -67,6 +64,7 @@ class _CardsViewState extends State<CardsView> {
         ]),
       fade: 1.0,
       onIndexChanged: (index) {
+        // ignore: avoid_print
         print(index);
       },
       scale: 0.8,
@@ -148,14 +146,14 @@ class _CardsViewState extends State<CardsView> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.sizeOf(context);
+    MediaQuery.sizeOf(context);
     return Scaffold(
       backgroundColor: TColor.gray,
       body: SingleChildScrollView(
         child: Stack(
           alignment: Alignment.topCenter,
           children: [
-            Container(
+            SizedBox(
               width: double.infinity,
               height: 600,
               child: buildSwiper(),
@@ -178,7 +176,7 @@ class _CardsViewState extends State<CardsView> {
                       ),
                       Row(
                         children: [
-                          Spacer(),
+                          const Spacer(),
                           IconButton(
                               onPressed: () {
                                 Navigator.push(
@@ -194,11 +192,9 @@ class _CardsViewState extends State<CardsView> {
                     ],
                   ),
                 ),
-
                 const SizedBox(
                   height: 380,
                 ),
-
                 Text(
                   "Subscriptions",
                   style: TextStyle(
@@ -206,12 +202,12 @@ class _CardsViewState extends State<CardsView> {
                       fontSize: 16,
                       fontWeight: FontWeight.w600),
                 ),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: subArr.map((sObj) {
                     return Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 4, vertical: 8),
                       child: Image.asset(
                         sObj["icon"],
                         width: 40,
@@ -220,11 +216,9 @@ class _CardsViewState extends State<CardsView> {
                     );
                   }).toList(),
                 ),
-
                 const SizedBox(
                   height: 40,
                 ),
-
                 Container(
                   height: 300,
                   decoration: BoxDecoration(
@@ -232,9 +226,9 @@ class _CardsViewState extends State<CardsView> {
                       borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(25),
                           topRight: Radius.circular(25))),
-
-                  child: Column(children: [
-                    Padding(
+                  child: Column(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 20),
                         child: InkWell(
@@ -275,7 +269,8 @@ class _CardsViewState extends State<CardsView> {
                           ),
                         ),
                       ),
-                  ],),
+                    ],
+                  ),
                 )
               ],
             ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:trackizer/common/color_extension.dart';
-import 'package:trackizer/view/login/welcome_view.dart';
 import 'package:trackizer/view/main_tab/main_tab_view.dart';
 
 void main() {
@@ -20,6 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Inter",
         colorScheme: ColorScheme.fromSeed(
           seedColor: TColor.primary,
+          // ignore: deprecated_member_use
           background: TColor.gray80,
           primary: TColor.primary,
           primaryContainer: TColor.gray60,

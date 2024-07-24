@@ -19,7 +19,7 @@ class _CalenderViewState extends State<CalenderView> {
       CalendarAgendaController();
   late DateTime selectedDateNotAppBBar;
 
-  Random random = new Random();
+  Random random = Random();
 
   List subArr = [
     {"name": "Spotify", "icon": "assets/img/spotify_logo.png", "price": "5.99"},
@@ -36,7 +36,7 @@ class _CalenderViewState extends State<CalenderView> {
     {"name": "NetFlix", "icon": "assets/img/netflix_logo.png", "price": "15.00"}
   ];
 
-    @override
+  @override
   void initState() {
     super.initState();
     selectedDateNotAppBBar = DateTime.now();
@@ -44,7 +44,7 @@ class _CalenderViewState extends State<CalenderView> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.sizeOf(context);
+    MediaQuery.sizeOf(context);
     return Scaffold(
       backgroundColor: TColor.gray,
       body: SingleChildScrollView(
@@ -78,15 +78,19 @@ class _CalenderViewState extends State<CalenderView> {
                                   ),
                                 ],
                               ),
-
                               Row(
                                 children: [
-                                  Spacer(),
+                                  const Spacer(),
                                   IconButton(
                                       onPressed: () {
-                                        Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingsView() ) );
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const SettingsView()));
                                       },
-                                      icon: Image.asset("assets/img/settings.png",
+                                      icon: Image.asset(
+                                          "assets/img/settings.png",
                                           width: 25,
                                           height: 25,
                                           color: TColor.gray30))
@@ -120,7 +124,8 @@ class _CalenderViewState extends State<CalenderView> {
                               InkWell(
                                 borderRadius: BorderRadius.circular(12),
                                 onTap: () {
-                                  calendarAgendaControllerNotAppBar.openCalender();
+                                  calendarAgendaControllerNotAppBar
+                                      .openCalender();
                                 },
                                 child: Container(
                                   padding: const EdgeInsets.symmetric(
@@ -143,7 +148,8 @@ class _CalenderViewState extends State<CalenderView> {
                                             fontWeight: FontWeight.w600),
                                       ),
                                       Icon(
-                                        Icons.expand_more, color: TColor.white,
+                                        Icons.expand_more,
+                                        color: TColor.white,
                                         size: 16.0,
                                       ),
                                     ],
@@ -155,19 +161,18 @@ class _CalenderViewState extends State<CalenderView> {
                         ],
                       ),
                     ),
-
                     CalendarAgenda(
                       controller: calendarAgendaControllerNotAppBar,
-                     backgroundColor: Colors.transparent,
-                     fullCalendarBackgroundColor: TColor.gray80,
-                      
+                      backgroundColor: Colors.transparent,
+                      fullCalendarBackgroundColor: TColor.gray80,
                       locale: 'en',
                       weekDay: WeekDay.short,
                       fullCalendarDay: WeekDay.short,
                       selectedDateColor: TColor.white,
                       initialDate: DateTime.now(),
                       calendarEventColor: TColor.secondary,
-                      firstDate: DateTime.now().subtract(const Duration(days: 140)),
+                      firstDate:
+                          DateTime.now().subtract(const Duration(days: 140)),
                       lastDate: DateTime.now().add(const Duration(days: 140)),
                       events: List.generate(
                           100,
@@ -178,7 +183,6 @@ class _CalenderViewState extends State<CalenderView> {
                           selectedDateNotAppBBar = date;
                         });
                       },
-
                       decoration: BoxDecoration(
                         border: Border.all(
                           color: TColor.border.withOpacity(0.15),
@@ -186,7 +190,6 @@ class _CalenderViewState extends State<CalenderView> {
                         color: TColor.gray60.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(12),
                       ),
-
                       selectDecoration: BoxDecoration(
                         border: Border.all(
                           color: TColor.border.withOpacity(0.15),
@@ -194,7 +197,6 @@ class _CalenderViewState extends State<CalenderView> {
                         color: TColor.gray60,
                         borderRadius: BorderRadius.circular(12),
                       ),
-
                       selectedEventLogo: Container(
                         width: 5,
                         height: 5,
@@ -206,13 +208,11 @@ class _CalenderViewState extends State<CalenderView> {
                       eventLogo: Container(
                         width: 5,
                         height: 5,
-                        decoration:  BoxDecoration(
-                          
+                        decoration: BoxDecoration(
                           color: TColor.secondary,
                           borderRadius: BorderRadius.circular(3),
                         ),
                       ),
-                      
                     ),
                   ],
                 ),

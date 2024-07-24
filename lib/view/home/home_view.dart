@@ -83,7 +83,7 @@ class _HomeViewState extends State<HomeView> {
                         padding: const EdgeInsets.only(right: 10),
                         child: Row(
                           children: [
-                            Spacer(),
+                            const Spacer(),
                             IconButton(
                                 onPressed: () {
                                   Navigator.push(

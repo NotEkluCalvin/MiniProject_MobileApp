@@ -43,6 +43,7 @@ dependencies:
   card_swiper:
     path: dev_lib/card_swiper
 
+  vector_math: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
