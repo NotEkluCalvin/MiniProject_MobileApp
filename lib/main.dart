@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trackizer/common/color_extension.dart';
-import 'package:trackizer/view/main_tab/main_tab_view.dart';
+import 'package:exvet/common/color_extension.dart';
+import 'package:exvet/view/main_tab/main_tab_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Trackizer',
+      title: 'exvet',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "Inter",

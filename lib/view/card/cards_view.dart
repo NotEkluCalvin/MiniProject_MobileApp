@@ -1,8 +1,8 @@
 import 'package:card_swiper/card_swiper.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:trackizer/common/color_extension.dart';
-import 'package:trackizer/view/settings/settings_view.dart';
+import 'package:exvet/common/color_extension.dart';
+import 'package:exvet/view/settings/settings_view.dart';
 
 class CardsView extends StatefulWidget {
   const CardsView({super.key});

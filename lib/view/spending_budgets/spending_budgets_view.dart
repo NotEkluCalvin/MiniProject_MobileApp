@@ -1,8 +1,8 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:trackizer/common/color_extension.dart';
-import 'package:trackizer/common_widget/budgets_row.dart';
-import 'package:trackizer/common_widget/custom_arc_180_painter.dart';
+import 'package:exvet/common/color_extension.dart';
+import 'package:exvet/common_widget/budgets_row.dart';
+import 'package:exvet/common_widget/custom_arc_180_painter.dart';
 
 import '../settings/settings_view.dart';
 

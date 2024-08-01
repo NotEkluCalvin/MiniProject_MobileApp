@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trackizer/view/login/sign_in_view.dart';
+import 'package:exvet/view/login/sign_in_view.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/primary_button.dart';
@@ -28,7 +28,7 @@ class _SignUpViewState extends State<SignUpView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("assets/img/app_logo.png",
+              Image.asset("assets/img/exvet_logo.png",
                   width: media.width * 0.5, fit: BoxFit.contain),
               const Spacer(),
               RoundTextField(
@@ -125,7 +125,7 @@ class _SignUpViewState extends State<SignUpView> {
               SecondaryButton(
                 title: "Sign in",
                 onPressed: () {
-                   Navigator.push(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const SignInView(),

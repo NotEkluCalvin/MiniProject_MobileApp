@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trackizer/view/login/sign_up_view.dart';
+import 'package:exvet/view/login/sign_up_view.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/secondary_boutton.dart';
@@ -16,14 +16,14 @@ class _SocialLoginViewState extends State<SocialLoginView> {
   Widget build(BuildContext context) {
     var media = MediaQuery.sizeOf(context);
     return Scaffold(
-     backgroundColor: TColor.gray,
+      backgroundColor: TColor.gray,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("assets/img/app_logo.png",
+              Image.asset("assets/img/exvet_logo.png",
                   width: media.width * 0.5, fit: BoxFit.contain),
               const Spacer(),
               InkWell(

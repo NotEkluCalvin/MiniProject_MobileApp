@@ -66,7 +66,7 @@ class _SettingsViewState extends State<SettingsView> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Code For Any",
+                  "Eklu Calvin Misornu",
                   style: TextStyle(
                       color: TColor.white,
                       fontSize: 20,
@@ -81,7 +81,7 @@ class _SettingsViewState extends State<SettingsView> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "codeforany@gmail.com",
+                  "eklucalvin@outlook.com",
                   style: TextStyle(
                       color: TColor.gray30,
                       fontSize: 12,

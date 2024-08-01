@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:trackizer/common/color_extension.dart';
-import 'package:trackizer/common_widget/primary_button.dart';
-import 'package:trackizer/common_widget/round_textfield.dart';
+import 'package:exvet/common/color_extension.dart';
+import 'package:exvet/common_widget/primary_button.dart';
+import 'package:exvet/common_widget/round_textfield.dart';
 
 import '../../common_widget/image_button.dart';
 
@@ -133,13 +133,13 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                 ),
               ),
             ),
-
             Padding(
-              padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
-              child: RoundTextField(title: "Description", titleAlign: TextAlign.center, controller: txtDescription, )
-
-            ),
-
+                padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                child: RoundTextField(
+                  title: "Description",
+                  titleAlign: TextAlign.center,
+                  controller: txtDescription,
+                )),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
               child: Row(
@@ -148,32 +148,28 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                   ImageButton(
                     image: "assets/img/minus.png",
                     onPressed: () {
-
                       amountVal -= 0.1;
 
-                      if(amountVal < 0) {
+                      if (amountVal < 0) {
                         amountVal = 0;
                       }
 
-                      setState(() {
-                        
-                      });
+                      setState(() {});
                     },
                   ),
-
                   Column(
                     children: [
-                        Text(
+                      Text(
                         "Monthly price",
                         style: TextStyle(
                             color: TColor.gray40,
                             fontSize: 12,
                             fontWeight: FontWeight.w600),
                       ),
-
-                     const SizedBox(height: 4,),
-
-                       Text(
+                      const SizedBox(
+                        height: 4,
+                      ),
+                      Text(
                         "\$${amountVal.toStringAsFixed(2)}",
                         style: TextStyle(
                             color: TColor.white,
@@ -183,7 +179,6 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                       const SizedBox(
                         height: 8,
                       ),
-
                       Container(
                         width: 150,
                         height: 1,
@@ -191,7 +186,6 @@ class _AddSubScriptionViewState extends State<AddSubScriptionView> {
                       )
                     ],
                   ),
-
                   ImageButton(
                     image: "assets/img/plus.png",
                     onPressed: () {

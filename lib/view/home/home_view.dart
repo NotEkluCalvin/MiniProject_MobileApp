@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trackizer/common/color_extension.dart';
+import 'package:exvet/common/color_extension.dart';
 
 import '../../common_widget/custom_arc_painter.dart';
 import '../../common_widget/segment_button.dart';
@@ -34,18 +34,18 @@ class _HomeViewState extends State<HomeView> {
   ];
 
   List bilArr = [
-    {"name": "Spotify", "date": DateTime(2023, 07, 25), "price": "5.99"},
+    {"name": "Spotify", "date": DateTime(2024, 08, 08), "price": "5.99"},
     {
       "name": "YouTube Premium",
-      "date": DateTime(2023, 07, 25),
+      "date": DateTime(2024, 08, 08),
       "price": "18.99"
     },
     {
       "name": "Microsoft OneDrive",
-      "date": DateTime(2023, 07, 25),
+      "date": DateTime(2024, 08, 08),
       "price": "29.99"
     },
-    {"name": "NetFlix", "date": DateTime(2023, 07, 25), "price": "15.00"}
+    {"name": "NetFlix", "date": DateTime(2024, 08, 08), "price": "15.00"}
   ];
 
   @override
@@ -71,14 +71,15 @@ class _HomeViewState extends State<HomeView> {
                     alignment: Alignment.topCenter,
                     children: [
                       Container(
-                        padding:  EdgeInsets.only(bottom: media.width * 0.05),
+                        padding: EdgeInsets.only(bottom: media.width * 0.05),
                         width: media.width * 0.72,
                         height: media.width * 0.72,
                         child: CustomPaint(
-                          painter: CustomArcPainter(end: 220, ),
+                          painter: CustomArcPainter(
+                            end: 220,
+                          ),
                         ),
                       ),
-
                       Padding(
                         padding: const EdgeInsets.only(right: 10),
                         child: Row(
@@ -107,13 +108,13 @@ class _HomeViewState extends State<HomeView> {
                       SizedBox(
                         height: media.width * 0.05,
                       ),
-                      Image.asset("assets/img/app_logo.png",
+                      Image.asset("assets/img/exvet_logo.png",
                           width: media.width * 0.25, fit: BoxFit.contain),
-                       SizedBox(
+                      SizedBox(
                         height: media.width * 0.07,
                       ),
                       Text(
-                        "\$1,235",
+                        "₵1,235",
                         style: TextStyle(
                             color: TColor.white,
                             fontSize: 40,
@@ -175,7 +176,7 @@ class _HomeViewState extends State<HomeView> {
                             Expanded(
                               child: StatusButton(
                                 title: "Highest subs",
-                                value: "\$19.99",
+                                value: "₵19.99",
                                 statusColor: TColor.primary10,
                                 onPressed: () {},
                               ),
@@ -186,7 +187,7 @@ class _HomeViewState extends State<HomeView> {
                             Expanded(
                               child: StatusButton(
                                 title: "Lowest subs",
-                                value: "\$5.99",
+                                value: "₵5.99",
                                 statusColor: TColor.secondaryG,
                                 onPressed: () {},
                               ),
@@ -245,8 +246,11 @@ class _HomeViewState extends State<HomeView> {
                     return SubScriptionHomeRow(
                       sObj: sObj,
                       onPressed: () {
-
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => SubscriptionInfoView( sObj: sObj ) ));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    SubscriptionInfoView(sObj: sObj)));
                       },
                     );
                   }),

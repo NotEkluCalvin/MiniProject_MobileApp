@@ -1,4 +1,4 @@
-# Monthly Expenses Trackizer App UI UX Design Convent Into Flutter Code
+# Monthly Expenses exvet App UI UX Design Convent Into Flutter Code
 
 # codeforany @codeforany
 

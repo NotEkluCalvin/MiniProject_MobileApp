@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "trackizer",
+            "name": "exvet",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "trackizer (profile mode)",
+            "name": "exvet (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "trackizer (release mode)",
+            "name": "exvet (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

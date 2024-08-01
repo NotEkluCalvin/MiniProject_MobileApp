@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:trackizer/view/login/sign_in_view.dart';
-import 'package:trackizer/view/login/social_login.dart';
+import 'package:exvet/view/login/sign_in_view.dart';
+import 'package:exvet/view/login/social_login.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/primary_button.dart';
@@ -42,7 +42,7 @@ class _WelcomeViewState extends State<WelcomeView> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset("assets/img/app_logo.png",
+                  Image.asset("assets/img/exvet_logo.png",
                       width: media.width * 0.5, fit: BoxFit.contain),
                   const Spacer(),
                   Text(
