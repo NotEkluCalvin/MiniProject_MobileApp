@@ -19,33 +19,17 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   bool isSubscription = true;
   List subArr = [
-    {"name": "Spotify", "icon": "assets/img/spotify_logo.png", "price": "5.99"},
-    {
-      "name": "YouTube Premium",
-      "icon": "assets/img/youtube_logo.png",
-      "price": "18.99"
-    },
-    {
-      "name": "Microsoft OneDrive",
-      "icon": "assets/img/onedrive_logo.png",
-      "price": "29.99"
-    },
-    {"name": "NetFlix", "icon": "assets/img/netflix_logo.png", "price": "15.00"}
+    {"name": "Yango", "icon": "assets/img/yango_logo.png", "price": "25.00"},
+    {"name": "Prepaid", "icon": "assets/img/ecg_logo.png", "price": "200.00"},
+    {"name": "KFC", "icon": "assets/img/kfc_logo.png", "price": "35.00"},
+    {"name": "4LUX", "icon": "assets/img/4lux_logo.png", "price": "400.00"}
   ];
 
   List bilArr = [
-    {"name": "Spotify", "date": DateTime(2024, 08, 08), "price": "5.99"},
-    {
-      "name": "YouTube Premium",
-      "date": DateTime(2024, 08, 08),
-      "price": "18.99"
-    },
-    {
-      "name": "Microsoft OneDrive",
-      "date": DateTime(2024, 08, 08),
-      "price": "29.99"
-    },
-    {"name": "NetFlix", "date": DateTime(2024, 08, 08), "price": "15.00"}
+    {"name": "Yango", "date": DateTime(2024, 08, 08), "price": "25.00"},
+    {"name": "Prepaid", "date": DateTime(2024, 25, 08), "price": "200.00"},
+    {"name": "KFC", "date": DateTime(2024, 08, 08), "price": "35.00"},
+    {"name": "4LUX", "date": DateTime(2024, 17, 08), "price": "400.00"}
   ];
 
   @override
@@ -164,7 +148,7 @@ class _HomeViewState extends State<HomeView> {
                           children: [
                             Expanded(
                               child: StatusButton(
-                                title: "Active subs",
+                                title: "Active bills",
                                 value: "12",
                                 statusColor: TColor.secondary,
                                 onPressed: () {},
@@ -175,7 +159,7 @@ class _HomeViewState extends State<HomeView> {
                             ),
                             Expanded(
                               child: StatusButton(
-                                title: "Highest subs",
+                                title: "Highest expenses",
                                 value: "₵19.99",
                                 statusColor: TColor.primary10,
                                 onPressed: () {},
@@ -186,7 +170,7 @@ class _HomeViewState extends State<HomeView> {
                             ),
                             Expanded(
                               child: StatusButton(
-                                title: "Lowest subs",
+                                title: "Lowest expenses",
                                 value: "₵5.99",
                                 statusColor: TColor.secondaryG,
                                 onPressed: () {},
@@ -210,7 +194,7 @@ class _HomeViewState extends State<HomeView> {
                 children: [
                   Expanded(
                     child: SegmentButton(
-                      title: "Your subscription",
+                      title: "Recent Expenses",
                       isActive: isSubscription,
                       onPressed: () {
                         setState(() {
@@ -221,7 +205,7 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   Expanded(
                     child: SegmentButton(
-                      title: "Upcoming bills",
+                      title: "Upcoming expenses",
                       isActive: !isSubscription,
                       onPressed: () {
                         setState(() {
