@@ -98,7 +98,7 @@ class _HomeViewState extends State<HomeView> {
                         height: media.width * 0.07,
                       ),
                       Text(
-                        "GHS1,235",
+                        "GHS4,340",
                         style: TextStyle(
                             color: TColor.white,
                             fontSize: 40,
@@ -108,7 +108,7 @@ class _HomeViewState extends State<HomeView> {
                         height: media.width * 0.055,
                       ),
                       Text(
-                        "This month bills",
+                        "Current Balance",
                         style: TextStyle(
                             color: TColor.gray40,
                             fontSize: 12,

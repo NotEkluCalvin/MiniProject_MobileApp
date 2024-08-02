@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../my_variables.dart' as my_variables;
 import '../common/color_extension.dart';
 
 class UpcomingBillRow extends StatelessWidget {
@@ -40,13 +40,12 @@ class UpcomingBillRow extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Jun",
+                      "Aug",
                       style: TextStyle(
                           color: TColor.gray30,
                           fontSize: 10,
                           fontWeight: FontWeight.w500),
                     ),
-
                     Text(
                       "25",
                       style: TextStyle(
@@ -73,7 +72,7 @@ class UpcomingBillRow extends StatelessWidget {
                 width: 8,
               ),
               Text(
-                "\$${sObj["price"]}",
+                "${my_variables.currencySymbol}${sObj["price"]}",
                 style: TextStyle(
                     color: TColor.white,
                     fontSize: 14,

@@ -94,7 +94,7 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                             height: 15,
                           ),
                           Text(
-                            '${my_variables.currencySymbol}{widget.sObj["price"]}',
+                            '${my_variables.currencySymbol}${widget.sObj["price"]}',
                             style: TextStyle(
                                 color: TColor.gray30,
                                 fontSize: 20,

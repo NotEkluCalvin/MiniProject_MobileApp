@@ -18,25 +18,25 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
     {
       "name": "Auto & Transport",
       "icon": "assets/img/auto_&_transport.png",
-      "spend_amount": "25.99",
-      "total_budget": "400",
-      "left_amount": "250.01",
+      "spend_amount": "25.00",
+      "total_budget": "1500",
+      "left_amount": "1475.00",
       "color": TColor.secondaryG
     },
     {
-      "name": "Entertainment",
+      "name": "Entertainment & Miscellaneous",
       "icon": "assets/img/entertainment.png",
-      "spend_amount": "50.99",
-      "total_budget": "600",
-      "left_amount": "300.01",
+      "spend_amount": "400.00",
+      "total_budget": "1000",
+      "left_amount": "600.00",
       "color": TColor.secondary50
     },
     {
-      "name": "Security",
+      "name": "Utilities & Food",
       "icon": "assets/img/security.png",
-      "spend_amount": "5.99",
-      "total_budget": "600",
-      "left_amount": "250.01",
+      "spend_amount": "235.00",
+      "total_budget": "2500",
+      "left_amount": "2265.00",
       "color": TColor.primary10
     },
   ];
@@ -75,9 +75,9 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
                   child: CustomPaint(
                     painter: CustomArc180Painter(
                       drwArcs: [
-                        ArcValueModel(color: TColor.secondaryG, value: 20),
-                        ArcValueModel(color: TColor.secondary, value: 45),
-                        ArcValueModel(color: TColor.primary10, value: 70),
+                        ArcValueModel(color: TColor.secondaryG, value: 0.50),
+                        ArcValueModel(color: TColor.secondary50, value: 16.00),
+                        ArcValueModel(color: TColor.primary10, value: 8.50),
                       ],
                       end: 50,
                       width: 12,
@@ -88,14 +88,14 @@ class _SpendingBudgetsViewState extends State<SpendingBudgetsView> {
                 Column(
                   children: [
                     Text(
-                      "GHS82,90",
+                      "GHS660",
                       style: TextStyle(
                           color: TColor.white,
                           fontSize: 24,
                           fontWeight: FontWeight.w700),
                     ),
                     Text(
-                      "of GHS2,0000 budget",
+                      "of GHS5,000 budget",
                       style: TextStyle(
                           color: TColor.gray30,
                           fontSize: 12,
