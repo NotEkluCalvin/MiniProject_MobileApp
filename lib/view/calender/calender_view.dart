@@ -22,18 +22,10 @@ class _CalenderViewState extends State<CalenderView> {
   Random random = Random();
 
   List subArr = [
-    {"name": "Spotify", "icon": "assets/img/spotify_logo.png", "price": "5.99"},
-    {
-      "name": "YouTube Premium",
-      "icon": "assets/img/youtube_logo.png",
-      "price": "18.99"
-    },
-    {
-      "name": "Microsoft OneDrive",
-      "icon": "assets/img/onedrive_logo.png",
-      "price": "29.99"
-    },
-    {"name": "NetFlix", "icon": "assets/img/netflix_logo.png", "price": "15.00"}
+    {"name": "Yango", "icon": "assets/img/yango_logo.png", "price": "25.00"},
+    {"name": "Prepaid", "icon": "assets/img/ecg_logo.png", "price": "200.00"},
+    {"name": "KFC", "icon": "assets/img/kfc_logo.png", "price": "35.00"},
+    {"name": "4LUX", "icon": "assets/img/4lux_logo.png", "price": "400.00"}
   ];
 
   @override
@@ -72,7 +64,7 @@ class _CalenderViewState extends State<CalenderView> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Calender",
+                                    "Calendar",
                                     style: TextStyle(
                                         color: TColor.gray30, fontSize: 16),
                                   ),
@@ -115,7 +107,7 @@ class _CalenderViewState extends State<CalenderView> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "3 subscription for today",
+                                "3 expenses for today",
                                 style: TextStyle(
                                     color: TColor.gray30,
                                     fontSize: 14,
@@ -141,7 +133,7 @@ class _CalenderViewState extends State<CalenderView> {
                                   child: Row(
                                     children: [
                                       Text(
-                                        "January",
+                                        "August",
                                         style: TextStyle(
                                             color: TColor.white,
                                             fontSize: 12,
@@ -226,14 +218,14 @@ class _CalenderViewState extends State<CalenderView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "January",
+                        "August",
                         style: TextStyle(
                             color: TColor.white,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        "\$24.98",
+                        "GHS24.98",
                         style: TextStyle(
                             color: TColor.white,
                             fontSize: 20,
@@ -245,7 +237,7 @@ class _CalenderViewState extends State<CalenderView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "01.08.2023",
+                        "08.10.2024",
                         style: TextStyle(
                             color: TColor.gray30,
                             fontSize: 12,

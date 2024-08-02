@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
+import '../my_variables.dart' as my_variables;
 import '../common/color_extension.dart';
+
+//String currencySymbol = 'GHS'; // Replace with the desired currency symbol
 
 class BudgetsRow extends StatelessWidget {
   final Map bObj;
@@ -10,8 +12,8 @@ class BudgetsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    var proVal = (double.tryParse(bObj["left_amount"]) ?? 0) / (double.tryParse(bObj["total_budget"]) ?? 0);
+    var proVal = (double.tryParse(bObj["left_amount"]) ?? 0) /
+        (double.tryParse(bObj["total_budget"]) ?? 0);
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
@@ -19,7 +21,6 @@ class BudgetsRow extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         onTap: onPressed,
         child: Container(
-          
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             border: Border.all(
@@ -60,7 +61,7 @@ class BudgetsRow extends StatelessWidget {
                               fontWeight: FontWeight.w600),
                         ),
                         Text(
-                          "\$${bObj["left_amount"]} left to spend",
+                          '${my_variables.currencySymbol}${bObj["left_amount"]} left to spend',
                           style: TextStyle(
                               color: TColor.gray30,
                               fontSize: 12,
@@ -77,14 +78,14 @@ class BudgetsRow extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "\$${bObj["spend_amount"]}",
+                          '${my_variables.currencySymbol}${bObj["spend_amount"]}',
                           style: TextStyle(
                               color: TColor.white,
                               fontSize: 14,
                               fontWeight: FontWeight.w600),
                         ),
                         Text(
-                          "of \$${bObj["total_budget"]}",
+                          'of ${my_variables.currencySymbol}${bObj["total_budget"]}',
                           style: TextStyle(
                               color: TColor.gray30,
                               fontSize: 12,
@@ -93,13 +94,14 @@ class BudgetsRow extends StatelessWidget {
                       ]),
                 ],
               ),
-
-              const SizedBox(height: 8,),
+              const SizedBox(
+                height: 8,
+              ),
               LinearProgressIndicator(
                 backgroundColor: TColor.gray60,
                 valueColor: AlwaysStoppedAnimation(bObj["color"]),
                 minHeight: 3,
-                value: proVal ,
+                value: proVal,
               )
             ],
           ),

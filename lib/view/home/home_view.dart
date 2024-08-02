@@ -98,7 +98,7 @@ class _HomeViewState extends State<HomeView> {
                         height: media.width * 0.07,
                       ),
                       Text(
-                        "₵1,235",
+                        "GHS1,235",
                         style: TextStyle(
                             color: TColor.white,
                             fontSize: 40,
@@ -159,8 +159,8 @@ class _HomeViewState extends State<HomeView> {
                             ),
                             Expanded(
                               child: StatusButton(
-                                title: "Highest expenses",
-                                value: "₵19.99",
+                                title: "Highest expense",
+                                value: "GHS400.00",
                                 statusColor: TColor.primary10,
                                 onPressed: () {},
                               ),
@@ -170,8 +170,8 @@ class _HomeViewState extends State<HomeView> {
                             ),
                             Expanded(
                               child: StatusButton(
-                                title: "Lowest expenses",
-                                value: "₵5.99",
+                                title: "Lowest expense",
+                                value: "GHS35.00",
                                 statusColor: TColor.secondaryG,
                                 onPressed: () {},
                               ),

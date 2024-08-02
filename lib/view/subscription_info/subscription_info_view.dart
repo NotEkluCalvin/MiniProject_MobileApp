@@ -1,7 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:exvet/common_widget/secondary_boutton.dart';
-
+import '../../my_variables.dart' as my_variables;
 import '../../common/color_extension.dart';
 import '../../common_widget/item_row.dart';
 
@@ -12,6 +12,8 @@ class SubscriptionInfoView extends StatefulWidget {
   @override
   State<SubscriptionInfoView> createState() => _SubscriptionInfoViewState();
 }
+
+//String currencySymbol = 'GHS'; // Replace with the desired currency symbol
 
 class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
   @override
@@ -57,7 +59,7 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                                     color: TColor.gray30),
                               ),
                               Text(
-                                "Subscription info",
+                                "About your expense",
                                 style: TextStyle(
                                     color: TColor.gray30, fontSize: 16),
                               ),
@@ -92,7 +94,7 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                             height: 15,
                           ),
                           Text(
-                            "\$${widget.sObj["price"]}",
+                            '${my_variables.currencySymbol}{widget.sObj["price"]}',
                             style: TextStyle(
                                 color: TColor.gray30,
                                 fontSize: 20,
@@ -124,15 +126,15 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                                 ),
                                 const ItemRow(
                                   title: "Description",
-                                  value: "Music app",
+                                  value: "Transportation Service",
                                 ),
                                 const ItemRow(
                                   title: "Category",
-                                  value: "Enterteintment",
+                                  value: "Auto & Transport",
                                 ),
                                 const ItemRow(
                                   title: "First payment",
-                                  value: "08.07.2023",
+                                  value: "25.01.2024",
                                 ),
                                 const ItemRow(
                                   title: "Reminder",
@@ -140,7 +142,7 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                                 ),
                                 const ItemRow(
                                   title: "Currency",
-                                  value: "USD (\$)",
+                                  value: "Ghana Cedi (GHS)",
                                 ),
                               ],
                             ),

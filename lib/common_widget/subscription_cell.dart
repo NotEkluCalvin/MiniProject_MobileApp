@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-
+import '../my_variables.dart' as my_variables;
 import '../common/color_extension.dart';
+
+//String currencySymbol = 'GHS'; //Replace with desired currency symbol
 
 class SubScriptionCell extends StatelessWidget {
   final Map sObj;
@@ -26,7 +28,6 @@ class SubScriptionCell extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-        
           children: [
             Image.asset(
               sObj["icon"],
@@ -45,7 +46,7 @@ class SubScriptionCell extends StatelessWidget {
               width: 8,
             ),
             Text(
-              "\$${sObj["price"]}",
+              '${my_variables.currencySymbol}${sObj["price"]}',
               style: TextStyle(
                   color: TColor.white,
                   fontSize: 20,

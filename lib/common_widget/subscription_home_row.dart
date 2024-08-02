@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import '../common/color_extension.dart';
 import 'package:intl/intl.dart';
 import 'dart:io';
+import '../my_variables.dart' as my_variables;
 
 String getCurrency() {
   var format =
       NumberFormat.simpleCurrency(locale: Platform.localeName, name: 'GHS');
   return format.currencySymbol;
 }
+
+//String currencySymbol = 'GHS'; // Replace with the desired currency symbol
 
 class SubScriptionHomeRow extends StatelessWidget {
   final Map sObj;
@@ -56,7 +59,7 @@ class SubScriptionHomeRow extends StatelessWidget {
                 width: 8,
               ),
               Text(
-                '\$${sObj["price"]}',
+                '${my_variables.currencySymbol}${sObj["price"]}',
                 style: TextStyle(
                     color: TColor.white,
                     fontSize: 14,
