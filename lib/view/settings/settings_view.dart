@@ -191,7 +191,7 @@ class _SettingsViewState extends State<SettingsView> {
                         IconItemRow(
                           title: "Default currency",
                           icon: "assets/img/money.png",
-                          value: "USD (\$)",
+                          value: "GHS (₵)",
                         ),
                       ],
                     ),
