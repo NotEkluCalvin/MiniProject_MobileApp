@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:exvet/common/color_extension.dart';
-import 'package:exvet/view/main_tab/main_tab_view.dart';
+//import 'package:exvet/view/main_tab/main_tab_view.dart';
+import 'package:exvet/view/login/welcome_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: false,
       ),
-      home: const MainTabView(),
+      //home: const MainTabView(),
+      home: const WelcomeView(),
     );
   }
 }
