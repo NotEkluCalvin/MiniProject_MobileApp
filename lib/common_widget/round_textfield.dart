@@ -49,6 +49,9 @@ class RoundTextField extends StatelessWidget {
               errorBorder: InputBorder.none,
               enabledBorder: InputBorder.none,
             ),
+            style: const TextStyle(
+              color: Colors.white,
+            ),
             keyboardType: keyboardType,
             obscureText: obscureText,
           ),
