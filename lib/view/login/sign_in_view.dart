@@ -122,6 +122,11 @@ class _SignInViewState extends State<SignInView> {
                   //     builder: (context) => const SocialLoginView(),
                   //   ),
                   // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MainTabView()),
+                  );
                 },
               ),
               const Spacer(),
