@@ -19,10 +19,42 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   bool isSubscription = true;
   List subArr = [
-    {"name": "Yango", "icon": "assets/img/yango_logo.png", "price": "25.00"},
-    {"name": "Prepaid", "icon": "assets/img/ecg_logo.png", "price": "200.00"},
-    {"name": "KFC", "icon": "assets/img/kfc_logo.png", "price": "35.00"},
-    {"name": "4LUX", "icon": "assets/img/4lux_logo.png", "price": "400.00"}
+    {
+      "name": "Yango",
+      "icon": "assets/img/yango_logo.png",
+      "price": "25.00",
+      "description": "",
+      "category": "",
+      "first_payment": "",
+      "reminder": ""
+    },
+    {
+      "name": "Prepaid",
+      "icon": "assets/img/ecg_logo.png",
+      "price": "200.00",
+      "description": "",
+      "category": "",
+      "first_payment": "",
+      "reminder": ""
+    },
+    {
+      "name": "KFC",
+      "icon": "assets/img/kfc_logo.png",
+      "price": "35.00",
+      "description": "",
+      "category": "",
+      "first_payment": "",
+      "reminder": ""
+    },
+    {
+      "name": "4LUX",
+      "icon": "assets/img/4lux_logo.png",
+      "price": "400.00",
+      "description": "",
+      "category": "",
+      "first_payment": "",
+      "reminder": ""
+    }
   ];
 
   List bilArr = [
