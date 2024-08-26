@@ -1,3 +1,5 @@
+// ignore_for_file: unused_element
+
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -48,5 +50,10 @@ class DatabaseHelper {
       return maps.first;
     }
     return null;
+  }
+
+  void _insertTestData() async {
+    DatabaseHelper dbHelper = DatabaseHelper();
+    await dbHelper.insertUser('eklucalvin@outlook.com', 'calvin2024');
   }
 }

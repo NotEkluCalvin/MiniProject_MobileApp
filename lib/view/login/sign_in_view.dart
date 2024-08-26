@@ -1,10 +1,13 @@
+// ignore_for_file: unused_element
+
 import 'package:flutter/material.dart';
 import 'package:exvet/view/login/sign_up_view.dart';
-
+import 'package:exvet/view/main_tab/main_tab_view.dart';
 import '../../common/color_extension.dart';
 import '../../common_widget/primary_button.dart';
 import '../../common_widget/round_textfield.dart';
 import '../../common_widget/secondary_boutton.dart';
+import '../../database_helper.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({super.key});
@@ -17,6 +20,27 @@ class _SignInViewState extends State<SignInView> {
   TextEditingController txtEmail = TextEditingController();
   TextEditingController txtPassword = TextEditingController();
   bool isRemember = false;
+
+  void _checkCredentials() async {
+    String email = txtEmail.text;
+    String password = txtPassword.text;
+
+    DatabaseHelper dbHelper = DatabaseHelper();
+    var user = await dbHelper.getUser(email, password);
+
+    if (user != null) {
+      // Credentials match, navigate to MainTabView
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const MainTabView()),
+      );
+    } else {
+      // Show an error message or handle invalid credentials
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Invalid email or password')),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
