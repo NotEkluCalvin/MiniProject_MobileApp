@@ -46,7 +46,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                       width: media.width * 0.5, fit: BoxFit.contain),
                   const Spacer(),
                   Text(
-                    "Congue malesuada in ac justo, a tristique\nleo massa. Arcu leo leo urna risus.",
+                    "Welcome to Exvet\nThe easiest way to track your expenses - wherever you are.",
                     textAlign: TextAlign.center,
                     style: TextStyle(color: TColor.white, fontSize: 14),
                   ),
