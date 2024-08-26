@@ -23,45 +23,45 @@ class _HomeViewState extends State<HomeView> {
       "name": "Yango",
       "icon": "assets/img/yango_logo.png",
       "price": "25.00",
-      "description": "",
-      "category": "",
-      "first_payment": "",
-      "reminder": ""
+      "description": "Transportation Service",
+      "category": "Auto & Transport",
+      "first_payment": "25.01.2024",
+      "reminder": "Never"
     },
     {
       "name": "Prepaid",
       "icon": "assets/img/ecg_logo.png",
       "price": "200.00",
-      "description": "",
-      "category": "",
-      "first_payment": "",
-      "reminder": ""
+      "description": "Electricity Bill",
+      "category": "Utilities",
+      "first_payment": "25.01.2024",
+      "reminder": "20.09.2024"
     },
     {
       "name": "KFC",
       "icon": "assets/img/kfc_logo.png",
       "price": "35.00",
-      "description": "",
-      "category": "",
-      "first_payment": "",
-      "reminder": ""
+      "description": "Fast Food",
+      "category": "Food",
+      "first_payment": "25.01.2024",
+      "reminder": "Never"
     },
     {
       "name": "4LUX",
       "icon": "assets/img/4lux_logo.png",
       "price": "400.00",
-      "description": "",
-      "category": "",
-      "first_payment": "",
-      "reminder": ""
+      "description": "Footwear",
+      "category": "Miscellaneous",
+      "first_payment": "25.01.2024",
+      "reminder": "12.09.2024"
     }
   ];
 
   List bilArr = [
-    {"name": "Yango", "date": DateTime(2024, 08, 08), "price": "25.00"},
-    {"name": "Prepaid", "date": DateTime(2024, 25, 08), "price": "200.00"},
-    {"name": "KFC", "date": DateTime(2024, 08, 08), "price": "35.00"},
-    {"name": "4LUX", "date": DateTime(2024, 17, 08), "price": "400.00"}
+    {"name": "Yango", "date": DateTime(2024, 08, 09), "price": "25.00"},
+    {"name": "Prepaid", "date": DateTime(2024, 25, 09), "price": "200.00"},
+    {"name": "KFC", "date": DateTime(2024, 08, 09), "price": "35.00"},
+    {"name": "4LUX", "date": DateTime(2024, 17, 09), "price": "400.00"}
   ];
 
   @override

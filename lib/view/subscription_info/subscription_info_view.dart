@@ -124,21 +124,25 @@ class _SubscriptionInfoViewState extends State<SubscriptionInfoView> {
                                   title: "Name",
                                   value: widget.sObj["name"],
                                 ),
-                                const ItemRow(
+                                ItemRow(
                                   title: "Description",
-                                  value: "Transportation Service",
+                                  value: widget.sObj["description"] ??
+                                      "Default Description",
                                 ),
-                                const ItemRow(
+                                ItemRow(
                                   title: "Category",
-                                  value: "Auto & Transport",
+                                  value: widget.sObj["category"] ??
+                                      "Default Category",
                                 ),
-                                const ItemRow(
-                                  title: "First payment",
-                                  value: "25.01.2024",
+                                ItemRow(
+                                  title: "First Payment",
+                                  value: widget.sObj["first_payment"] ??
+                                      "Default First Payment",
                                 ),
-                                const ItemRow(
+                                ItemRow(
                                   title: "Reminder",
-                                  value: "Never",
+                                  value: widget.sObj["reminder"] ??
+                                      "Default Reminder",
                                 ),
                                 const ItemRow(
                                   title: "Currency",
